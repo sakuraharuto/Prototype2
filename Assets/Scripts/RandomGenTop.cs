@@ -25,7 +25,7 @@ public class RandomGenTop : MonoBehaviour
             {
                 Instantiate(bullet, new Vector3(xPos,yPos,0),Quaternion.identity);
             }
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(4.5f);
             objectQuantity += 1;
         }
     }
