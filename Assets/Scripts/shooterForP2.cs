@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shooter : MonoBehaviour
+public class shooterForP2 : MonoBehaviour
 {
     [SerializeField] GameObject Projectile;
     [SerializeField] float ProjectileSpeed = 4f;
@@ -34,7 +34,7 @@ public class shooter : MonoBehaviour
         {
             GameObject instance = Instantiate(Projectile, transform.position, Quaternion.identity);
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
-            rb.velocity = transform.up * ProjectileSpeed;
+            rb.velocity = -transform.up * ProjectileSpeed;
             isFiring = false;
         }
     

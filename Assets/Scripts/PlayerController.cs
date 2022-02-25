@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb2d;
 
     shooter Shooter;
+    public static int BulletAmount = 0;
     
 
    // [SerializeField] GameObject Projectile;
@@ -47,15 +48,16 @@ public class PlayerController : MonoBehaviour
     {
         if(Shooter != null)
         {
-            
-                   Shooter.isFiring = true;
-                    Debug.Log("Firing!");
-                    
-
-                
+            if(BulletAmount == 1)
+            {
+                Shooter.isFiring = true;
+                Debug.Log("Firing!");
+                PlayerController.BulletAmount = 0;
+            }
         }
+
     }
-        
+
 
         
 }

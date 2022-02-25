@@ -81,7 +81,7 @@
                 {
                     "name": "",
                     "id": "d9810f54-4965-4ee5-b8bd-d89bf1e8e467",
-                    "path": "<Gamepad>/rightStick",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "2P",
@@ -96,6 +96,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "1P",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3fbbb89b-696e-4545-9f7f-d0893d17a0bc",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "2P",
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
