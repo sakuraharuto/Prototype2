@@ -20,7 +20,7 @@ public class RandomGenBot : MonoBehaviour
         {
             objectToGenerate = Random.Range(1,2);
             xPos = Random.Range(-3.8f, 3.8f);
-            yPos = Random.Range(-4.8f, -1f);
+            yPos = Random.Range(-4.4f, -2.3f);
             if (objectToGenerate == 1)
             {
                 Instantiate(bullet, new Vector3(xPos,yPos,0),Quaternion.identity);

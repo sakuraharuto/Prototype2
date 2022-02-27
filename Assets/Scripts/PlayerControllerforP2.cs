@@ -4,16 +4,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerforP2 : MonoBehaviour
 {   
     [SerializeField] float moveSpeed = 5f;
     Vector2 moveInput;
     Rigidbody2D rb2d;
 
-    shooter Shooter;
-    public static int BulletAmount = 0;
+    shooterforP2 Shooter;
+    public static int BulletAmountforP2 = 0;
     public static int Score = 0;
-    
     public static int health = 3;
 
    // [SerializeField] GameObject Projectile;
@@ -22,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake() 
     {
-      Shooter = GetComponent<shooter>();   
+      Shooter = GetComponent<shooterforP2>();   
     }
     // Start is called before the first frame update
     void Start()
@@ -53,11 +52,11 @@ public class PlayerController : MonoBehaviour
     {
         if(Shooter != null)
         {
-            if(BulletAmount == 1)
+            if(BulletAmountforP2 == 1)
             {
-                Shooter.isFiring = true;
-                //Debug.Log("Firing!");
-                PlayerController.BulletAmount = 0;
+                Shooter.isFiringforP2 = true;
+                Debug.Log("Firing!");
+                PlayerControllerforP2.BulletAmountforP2 = 0;
             }
         }
 

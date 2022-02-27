@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shooterForP2 : MonoBehaviour
+public class shooterforP2 : MonoBehaviour
 {
     [SerializeField] GameObject Projectile;
     [SerializeField] float ProjectileSpeed = 4f;
     // Start is called before the first frame update
+
+    Vector3 VectorOffSett;
+    
      
-    public bool isFiring;
+    public bool isFiringforP2;
     
 
     void Start()
@@ -29,13 +32,14 @@ public class shooterForP2 : MonoBehaviour
 
     void shooting()
     {
+        VectorOffSett = new Vector3(0f,-0.48f,0f);
         
-        if(isFiring)
+        if(isFiringforP2)
         {
-            GameObject instance = Instantiate(Projectile, transform.position, Quaternion.identity);
+            GameObject instance = Instantiate(Projectile, transform.position+VectorOffSett, Quaternion.identity);
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
             rb.velocity = -transform.up * ProjectileSpeed;
-            isFiring = false;
+            isFiringforP2 = false;
         }
     
     }
