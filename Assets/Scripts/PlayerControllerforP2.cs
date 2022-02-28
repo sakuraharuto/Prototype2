@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerControllerforP2 : MonoBehaviour
 {   
-    [SerializeField] float moveSpeed = 5f;
+    float moveSpeed = 5f;
     Vector2 moveInput;
     Rigidbody2D rb2d;
 
@@ -55,7 +55,7 @@ public class PlayerControllerforP2 : MonoBehaviour
             if(BulletAmountforP2 > 0)
             {
                 Shooter.isFiringforP2 = true;
-                Debug.Log("Firing!");
+                //Debug.Log("Firing!");
                 PlayerControllerforP2.BulletAmountforP2 --;
             }
         }

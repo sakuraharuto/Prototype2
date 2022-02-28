@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {   
-    [SerializeField] float moveSpeed = 5f;
+     float moveSpeed = 5f;
     Vector2 moveInput;
     Rigidbody2D rb2d;
 
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
     {
         if(WholeScore == 5)
         {
-            Debug.Log("win!!!!!!!!!!!");
+            //Debug.Log("win!!!!!!!!!!!");
         }
     }
 
