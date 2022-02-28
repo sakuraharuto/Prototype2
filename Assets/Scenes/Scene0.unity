@@ -1196,7 +1196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209da1eaa4986dd408345bb84b54b44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!114 &774760376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6250,7 +6249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeec5c8a4c57f402c8925e57b737f5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!50 &1148409590
 Rigidbody2D:
   serializedVersion: 4
@@ -7196,7 +7194,7 @@ Camera:
   m_GameObject: {fileID: 1926923227}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.35933605, g: 0.5314391, b: 0.8018868, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2

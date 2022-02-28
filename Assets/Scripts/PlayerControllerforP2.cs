@@ -22,6 +22,8 @@ public class PlayerControllerforP2 : MonoBehaviour
     void Awake() 
     {
       Shooter = GetComponent<shooterforP2>();   
+      moveSpeed = 5f;
+    
     }
     // Start is called before the first frame update
     void Start()
