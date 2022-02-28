@@ -11,10 +11,14 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb2d;
 
     shooter Shooter;
+    ScoreRecord scorerecord;
+    PlayerControllerforP2 P2;
     public static int BulletAmount = 0;
     public static int Score = 0;
+
+    public static  int WholeScore;
+
     
-    public static int health = 3;
 
    // [SerializeField] GameObject Projectile;
     
@@ -22,7 +26,9 @@ public class PlayerController : MonoBehaviour
 
     void Awake() 
     {
-      Shooter = GetComponent<shooter>();   
+      Shooter = GetComponent<shooter>();  
+      scorerecord = GetComponent <ScoreRecord>(); 
+      P2 = GetComponent <PlayerControllerforP2>(); 
     }
     // Start is called before the first frame update
     void Start()
@@ -36,7 +42,11 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMove();
         GameSucess();
-        Gamelose();
+        Counting();
+        //Gamelose();
+        
+        Debug.Log(WholeScore);
+        
     }
 
     void OnMovement(InputValue value){
@@ -53,11 +63,11 @@ public class PlayerController : MonoBehaviour
     {
         if(Shooter != null)
         {
-            if(BulletAmount == 1)
+            if(BulletAmount > 0)
             {
                 Shooter.isFiring = true;
                 //Debug.Log("Firing!");
-                PlayerController.BulletAmount = 0;
+                PlayerController.BulletAmount --;
             }
         }
 
@@ -65,18 +75,26 @@ public class PlayerController : MonoBehaviour
 
     void GameSucess()
     {
-        if(Score == 5)
+        if(WholeScore == 5)
         {
             Debug.Log("win!!!!!!!!!!!");
         }
     }
 
-    void Gamelose()
+    //void Gamelose()
+   // {   if(scorerecord != null)
+        //{
+           // if(scorerecord.health == false )
+           // {
+             //   Score--;
+             //   scorerecord.health = true;
+           // }
+       // }
+    //}
+
+    void Counting()
     {
-        if(health == 0)
-        {
-            SceneManager.LoadScene(0);
-        }
+        WholeScore = PlayerControllerforP2.Score + Score;
     }
 
         

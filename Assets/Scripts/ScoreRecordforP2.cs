@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreRecord : MonoBehaviour
+public class ScoreRecordforP2 : MonoBehaviour
 {
     //public bool health;
     // Start is called before the first frame update
@@ -10,14 +10,14 @@ public class ScoreRecord : MonoBehaviour
     {
         if (collision.transform.tag == "Basket")
         {
-            PlayerController.Score ++ ;
+            PlayerControllerforP2.Score ++ ;
             Destroy(gameObject);
             
         }
 
         if(collision.transform.tag == "HealthBar")
         {
-            PlayerController.Score -- ;
+            PlayerControllerforP2.Score -- ;
             Destroy(gameObject);
         }
         
@@ -28,3 +28,4 @@ public class ScoreRecord : MonoBehaviour
 
     }
 }
+

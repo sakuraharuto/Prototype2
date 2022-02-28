@@ -8,7 +8,7 @@ public class BulletCollect : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            PlayerController.BulletAmount = 1 ;
+            PlayerController.BulletAmount ++ ;
             Destroy(gameObject);
             
         }

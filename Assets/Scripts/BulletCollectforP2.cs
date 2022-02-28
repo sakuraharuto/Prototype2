@@ -8,7 +8,7 @@ public class BulletCollectforP2 : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            PlayerControllerforP2.BulletAmountforP2 = 1 ;
+            PlayerControllerforP2.BulletAmountforP2 ++ ;
             Destroy(gameObject);
             
         }

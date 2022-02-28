@@ -34,8 +34,8 @@ public class PlayerControllerforP2 : MonoBehaviour
     void Update()
     {
         PlayerMove();
-        GameSucess();
-        Gamelose();
+        //GameSucess();
+        //Gamelose();
     }
 
     void OnMovement(InputValue value){
@@ -52,31 +52,31 @@ public class PlayerControllerforP2 : MonoBehaviour
     {
         if(Shooter != null)
         {
-            if(BulletAmountforP2 == 1)
+            if(BulletAmountforP2 > 0)
             {
                 Shooter.isFiringforP2 = true;
                 Debug.Log("Firing!");
-                PlayerControllerforP2.BulletAmountforP2 = 0;
+                PlayerControllerforP2.BulletAmountforP2 --;
             }
         }
 
     }
 
-    void GameSucess()
-    {
-        if(Score == 5)
-        {
-            Debug.Log("win!!!!!!!!!!!");
-        }
-    }
+    //void GameSucess()
+    //{
+       // if(Score == 5)
+       // {
+        //    Debug.Log("win!!!!!!!!!!!");
+        //}
+    //}
 
-    void Gamelose()
-    {
-        if(health == 0)
-        {
-            SceneManager.LoadScene(0);
-        }
-    }
+   // void Gamelose()
+   // {
+      //  if(health == 0)
+        //{
+        //    SceneManager.LoadScene(0);
+       // }
+   // }
 
         
 }
